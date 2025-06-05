@@ -3,12 +3,10 @@ const express = require('express');
 const app = express();
 
 const usersRoutes = require('./routes/users.js')
-
+const middlewareLogRequest = require('./middleware/logs.js')
 
 // app.method(path, handler);
-// app.use("/", (req, res, next) => { //Bisa jadi Middleware dan Bersifat General
-//     res.send("Hello Tot");
-// });
+app.use(middlewareLogRequest); //middleware
 
 app.use('/users', usersRoutes) //memakai semua method yang ada di route /users
 
