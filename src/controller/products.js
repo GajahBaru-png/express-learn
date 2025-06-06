@@ -1,5 +1,5 @@
 const supabase = require('../config/supabase.js');
-const { createNewUser } = require('./users.js');
+
 
 // GET METHOD
 const getAllProducts = async (req, res) => {
