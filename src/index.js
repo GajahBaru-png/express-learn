@@ -7,19 +7,10 @@ const middlewareLogRequest = require('./middleware/logs.js')
 
 // app.method(path, handler);
 app.use(middlewareLogRequest); //middleware
+app.use(express.json());
 
 app.use('/users', usersRoutes) //memakai semua method yang ada di route /users
 
-app.get("/", (req, res) => {
-    res.json({
-        nama: "Christo",
-        email: "christo@gmail.com"
-    });
-})
-
-app.post("/", (req, res) => {
-    res.send("Hello Post Method")
-})
 
 app.listen(4000, ()=> {
     console.log('Server Berhasil Dijalankan');
