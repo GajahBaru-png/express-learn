@@ -1,4 +1,5 @@
 const express = require('express');
+const supabase = require('@supabase/supabase-js');
 
 const app = express();
 

@@ -9,6 +9,7 @@
     "@supabase/supabase-js": "^2.49.10",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "http-errors": "~1.6.3",
     "jade": "^0.29.0",
