@@ -1,6 +1,6 @@
 const express = require('express');
 const supabase = require('@supabase/supabase-js');
-
+const cors = require('cors');
 
 const app = express();
 
@@ -14,12 +14,14 @@ const middlewareLogRequest = require('./middleware/logs.js')
 // app.method(path, handler);
 app.use(middlewareLogRequest); //middleware
 app.use(express.json());
-
+app.use(cors());
 app.use('/auth', authRoutes);
 app.use('/users', usersRoutes) //memakai semua method yang ada di route /users
 app.use('/products', productsRoutes) //memakai semua method yang ada di routes /products
 
 app.use('/profile', profileRoutes);
+
+
 
 app.listen(4000, ()=> {
     console.log('Server Berhasil Dijalankan');
