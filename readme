@@ -1,7 +1,11 @@
 Index.js akan memanggil yang ada di routes lalu respon pada routes di simpan di controller.
 
-CRUD
+// CRUD
 Create = POST
 Read = GET
 Update = PATCH
 Delete = DELETE
+
+// Mau Connect Frontend
+pakainya cors di backend
+sedangkan di Front pakai axios
